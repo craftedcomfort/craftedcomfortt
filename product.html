@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family:arial,Helvetica,sans-serif;
+            padding: 0;
+            background-color:#E3DFDE;
+            margin-bottom:100px;
+        }
+        .header {
+            background-color:#E3DFDE;
+            color: #070707;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #BFAA9D;
+        }
+        .nav a {
+            position: relative;
+            display: flex;
+            color: black;
+            padding: 20px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color: #AC9362;
+            color: white;
+	        transform: scale(1.1);
+        }
+        .main {
+            padding: 20px;
+            text-align: center; 
+        }
+        .dropdown-btn {
+    background-color: #BFAA9D;
+    color: black;
+    padding: 20px 20px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.dropdown-btn:hover {
+    background-color: #AC9362;
+}
+
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #BFAA9D;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 28px;
+    text-decoration: none;
+    display: block;
+    font-size: 11.5px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #AC9362;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+        .gallery {
+            perspective: 1000px;
+        }
+
+        .gallery-container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 20s infinite linear;
+            gap: 10px;
+            padding:30px;
+        }
+
+        .gallery-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-image:nth-child(1) {
+            transform: rotateY(0deg);
+        }
+
+        .gallery-image:nth-child(2) {
+            transform: rotateY(90deg);
+        }
+
+        .gallery-image:nth-child(3) {
+            transform: rotateY(180deg);
+        }
+
+        .gallery-image:nth-child(4) {
+            transform: rotateY(270deg);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            row-gap: 30px;
+            column-gap: 5px;
+            margin-top: 100px;
+            margin: 100px 0px 100px 100px;
+        }
+
+        .thumbnail {
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            width: 200px;
+            height: 205px;
+            position: relative;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            font-family: arial,Helvetica,sans-serif;
+            font-size: 15px;
+            padding: 1px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .thumbnail:hover .description {
+            opacity: 1;
+        }
+        .available{
+            margin: 0px 0px 0px 30px;
+            }
+
+        .available h4{
+            color: #412A1A;
+            letter-spacing: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo 1.png" class="logo">
+        <nav class="navbar">
+                
+                <a href="web.html">HOME</a>
+                <a href="" style="border-bottom: 2px solid #1d2e1e">PRODUCTS</a>
+                <a href="">CONTACT</a>
+                <a href="">ABOUT</a>
+            </nav>
+            <a href=""><button>LOG IN</button> </a>
+          </header>
+    
+          <div class="gallery">
+            <CENTER>
+                    <div class="gallery-container">
+                        <div class="gallery-image"><img src="1.png"></div>
+                        <div class="gallery-image"><img src="2.png"></div>
+                        <div class="gallery-image"><img src="3.png"></div>
+                        <div class="gallery-image"><img src="3.png"></div>
+                        
+                    </div>
+                </div>
+                
+                            </CENTER>                     
+    </div> 
+    
+    <div class="thumbnail-gallery">
+        <div class="thumbnail"><img src="462547237_532481459566379_1573078386971189758_n.png" alt="thumbnail 1">
+            <a href="category1.html"><button>Bar Stool/Chair </button> </a></div>
+        <div class="thumbnail"><img src="462544591_1501631113865760_5103297726534513238_n (1).png" alt="thumbnail 2">
+            <a href="category2.html"><button>Living Room Chair</button> </a></div>
+            <div class="thumbnail"><img src="462551294_474333588259658_5834411896883587946_n.png" alt="thumbnail 3">
+                <a href="category3.html"><button>Dining Table</button> </a></div>
+            <div class="thumbnail"><img src="okey.png" alt="thumbnail 4">
+                <a href="category4.html"><button>Office Table</button> </a></div></div>
+            <div class="thumbnail"><img src="russo.png" alt="thumbnail 5">
+                <a href="category5.html"><button>TV Rack</button> </a></div></div>
+            <div class="thumbnail"><img src="462549879_1227509225237478_3432376187602030139_n.png" alt="thumbnail 6">
+                <a href="category6.html"><button>Dining Table</button> </a></div></div>
+            <div class="thumbnail"><img src="462584474_515938848076086_9187895362203900487_n.png" alt="thumbnail 7">
+                <a href="category7.html"><button>Kitchen Cabinet</button> </a></div></div>
+            <div class="thumbnail"><img src="462563207_892191525876041_4835591530184348549_n.png" alt="thumbnail 7">
+                <a href="category8.html"><button>Wardrobe</button> </a></div></div>
+            <div class="thumbnail"><img src="462552306_509686348567026_6253663085893925975_n.png" alt="thumbnail 7">
+                <a href="category9.html"><button>Queen Size Bed</button> </a></div></div>
+            <div class="thumbnail"><img src="62567862_1093608828844150_2650402318347250869_n.png" alt="thumbnail 7">
+                <a href="category10.html"><button>Double Deck</button> </a></div></div>
+            <style>

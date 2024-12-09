@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 500px;
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    .modal{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-toggle{
+display: none;
+    }
+    .modal-toggle:checked+.modal{
+        display: block;
+    }
+    .modal-content{
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .close{
+        color:#aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close:hover{
+        color: black;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    label{
+        margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="password"]{
+        padding:1opx;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+    }
+    button[type="submit"]{
+        background-color: #28a745;
+        border: none;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button[type="submit"]:hover{
+        background-color: #218838;
+    }
+    .user-need{
+        display:flex;
+        justify-content:flex-end;
+        color: black;
+        
+    }
+    .user-need a{
+        text-decoration:none;
+    }
+</style>
+</head>
+<body>
+   
+        <div class="modal-content">
+            <label for="modal-toggle" class="close">&times;</label>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Submit</button>
+                <div class="user-need">
+                    <a href="REGISTER.html"><p>Register here!</p></a>
+                </div>
+            </form>
+        </div>
+      </div>
+
+    </font>
+</body>
+</html>
